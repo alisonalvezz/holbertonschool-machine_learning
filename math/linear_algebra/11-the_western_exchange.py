@@ -14,4 +14,4 @@ def np_transpose(matrix):
     Returns:
         a new numpy.ndarray
     """
-    return matrix.transpose
+    return matrix.transpose()

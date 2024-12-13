@@ -3,6 +3,7 @@
 """
 cats got your tongue
 """
+import numpy as np
 
 
 def np_cat(mat1, mat2, axis=0):
@@ -14,5 +15,4 @@ def np_cat(mat1, mat2, axis=0):
     Return:
         a new numnpy.ndarray
     """
-    import numpy as np
     return np.concatenate((mat1, mat2), axis=axis)

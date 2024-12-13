@@ -3,6 +3,7 @@
 """
 saddle up
 """
+import numpy as np
 
 
 def np_matmul(mat1, mat2):
@@ -14,5 +15,4 @@ def np_matmul(mat1, mat2):
     Return:
         the result of the matrix mult.
     """
-    import numpy as np
     return np.matmul(mat1, mat2)
