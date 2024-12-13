@@ -7,7 +7,7 @@ bracin the elements
 
 def np_elementwise(mat1, mat2):
     """
-    Performs element-wise addition, substraction, 
+    Performs element-wise addition, substraction,
     multiplication and division
     Attributes:
         mat1: first matrix to perform
