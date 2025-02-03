@@ -11,7 +11,7 @@ def line():
     plt.figure(figsize=(6.4, 4.8))
 
     plt.xlim(0, 10)
-    plt.plot(y, color='r')
+    plt.plot(range(11), y, color='r')
     plt.show()
 
 line()
