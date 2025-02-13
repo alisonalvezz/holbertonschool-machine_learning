@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
+"""
+neuron 
+"""
+
+
 import numpy as np
-"""
-neuron
-"""
 
 
 class Neuron:
