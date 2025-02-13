@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 import numpy as np
 
+
 class Neuron:
     """Class that defines a single neuron performing binary classification"""
-    
+
     def __init__(self, nx):
         """Initialize the neuron"""
         if not isinstance(nx, int):
