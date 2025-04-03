@@ -11,7 +11,7 @@ def add_matrices2D(mat1, mat2):
         mat1: First matrix.
         mat2: Second matrix.
     Returns:
-        None if they aren't the same shape, 
+        None if they aren't the same shape,
         otherwise a new matrix with the addition.
     """
     if len(mat1) != len(mat2) or any(
