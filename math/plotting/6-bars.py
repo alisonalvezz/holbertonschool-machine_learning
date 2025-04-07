@@ -7,15 +7,15 @@ def bars():
     """
     generates a stacked bar graph showing the number of different fruits
     (apples, bananas, oranges, peaches) that Farrah, Fred, and Felicia have
-    
+
     -apples are colored red
     -bananas are colored yellow
     -oranges are colored orange (#ff8000)
     -peaches are colored peach (#ffe5b4)
 
-    bars are stacked in the order of the fruit matrix 
+    bars are stacked in the order of the fruit matrix
     (from bottom to top)
-    the graph includes a legend, y-axis label, 
+    the graph includes a legend, y-axis label,
     tick marks every 10 units (0 to 80),
     and a title
     """
