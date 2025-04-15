@@ -42,7 +42,7 @@ class Node:
             return 0
         depth = max(right_depth, left_depth)
         return depth
-    
+
     def count_nodes_below(self, only_leaves=False):
         """
         Counts the number of nodes below this node, including internal nodes
@@ -78,7 +78,7 @@ class Leaf(Node):
 
     def max_depth_below(self):
         return self.depth
-    
+
     def count_nodes_below(self, only_leaves=False):
         return 1
 
@@ -100,6 +100,6 @@ class Decision_Tree:
 
     def depth(self):
         return self.root.max_depth_below()
-    
-    def count_nodes(self, only_leaves=False) :
+
+    def count_nodes(self, only_leaves=False):
         return self.root.count_nodes_below(only_leaves=only_leaves)
