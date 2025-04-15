@@ -52,7 +52,8 @@ class Node:
         subtrees, and returns the total number of nodes.
 
         Attributes:
-        only_leaves (bool): Whether to count only leaf nodes (default is False).
+        only_leaves (bool): Whether to count only 
+        leaf nodes (default is False).
 
         Returns:
         int: The number of nodes below this node.
