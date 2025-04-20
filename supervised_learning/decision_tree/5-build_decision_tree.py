@@ -164,7 +164,6 @@ class Node:
         self.indicator = lambda x: np.all(np.array(
             [is_large_enough(x), is_small_enough(x)]), axis=0)
 
-
     def __str__(self):
         """
         String representation of the node and its children
