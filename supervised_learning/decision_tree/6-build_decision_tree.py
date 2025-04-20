@@ -138,22 +138,25 @@ class Node:
 
             Returns:
                 np.ndarray: 1D array of booleans indicating whether each individual
-                            satisfies the lower bounds.
+                             satisfies the lower bounds.
             """
             return np.array([np.greater(x[:, key], self.lower[key])
                              for key in self.lower.keys()]).all(axis=0)
 
         def is_small_enough(x):
             """
-            Checks if the features of individuals are less than or equal to the upper bounds
+            Checks if the features of individuals
+            are less than or equal to the upper bounds
             for each feature.
 
             Args:
-                x (np.ndarray): 2D array of shape (n_individuals, n_features)
+                x (np.ndarray): 2D array of shape (n_individuals,
+                n_features)
 
             Returns:
-                np.ndarray: 1D array of booleans indicating whether each individual
-                            satisfies the upper bounds.
+                np.ndarray: 1D array of booleans indicating
+                        whether each individual
+                             satisfies the upper bounds.
             """
             return np.array([np.less_equal(x[:, key], self.upper[key])
                              for key in self.upper.keys()]).all(axis=0)
@@ -186,9 +189,11 @@ class Node:
             output = f"node [feature={self.feature}, threshold={self.threshold}]"
 
         if self.left_child:
-            output += "\n" + left_child_add_prefix(str(self.left_child).rstrip())
+            output += "\n" + left_child_add_prefix(
+                str(self.left_child).rstrip())
         if self.right_child:
-            output += "\n" + right_child_add_prefix(str(self.right_child).rstrip())
+            output += "\n" + right_child_add_prefix(
+                str(self.right_child).rstrip())
 
         return output
 

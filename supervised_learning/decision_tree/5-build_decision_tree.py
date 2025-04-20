@@ -125,18 +125,21 @@ class Node:
 
     def update_indicator(self):
         """
-        updates the indicator function for the current node.
-        the indicatr function is stored in the 'indicator' attribute.
+        Updates the indicator function for the current node.
+        The indicator function is stored in the 'indicator' attribute.
         """
         def is_large_enough(x):
             """
-            Checks if the features of individuals are greater than the lower bounds
+            Checks if the features of individuals are greater than the
+            lower bounds
             for each feature.
+
             Args:
                 x (np.ndarray): 2D array of shape (n_individuals, n_features)
 
             Returns:
-                np.ndarray: 1D arry of booleans indicating whether each individual
+                np.ndarray: 1D array of booleans indicating whether each
+                individual
                             satisfies the lower bounds.
             """
             return np.array([np.greater(x[:, key], self.lower[key])
@@ -144,7 +147,8 @@ class Node:
 
         def is_small_enough(x):
             """
-            Checks if the features of individuals are less than or equal to the upper bounds
+            Checks if the features of individuals are less than or equal
+            to the upper bounds
             for each feature.
 
             Args:
@@ -166,14 +170,18 @@ class Node:
         String representation of the node and its children
         """
         if self.is_root:
-            output = f"root [feature={self.feature}, threshold={self.threshold}]"
+            output = f"root [feature={self.feature},\
+                threshold={self.threshold}]"
         else:
-            output = f"node [feature={self.feature}, threshold={self.threshold}]"
+            output = f"node [feature={self.feature},\
+                threshold={self.threshold}]"
 
         if self.left_child:
-            output += "\n" + left_child_add_prefix(str(self.left_child).rstrip())
+            output += "\n" +\
+                left_child_add_prefix(str(self.left_child).rstrip())
         if self.right_child:
-            output += "\n" + right_child_add_prefix(str(self.right_child).rstrip())
+            output += "\n" +\
+                right_child_add_prefix(str(self.right_child).rstrip())
 
         return output
 
@@ -289,4 +297,3 @@ class Decision_Tree:
         String representation of the entire tree
         """
         return self.root.__str__()
-

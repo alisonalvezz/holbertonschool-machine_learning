@@ -103,14 +103,18 @@ class Node:
         String representation of the node and its children
         """
         if self.is_root:
-            output = f"root [feature={self.feature}, threshold={self.threshold}]"
+            output = f"root [feature={self.feature},\
+                threshold={self.threshold}]"
         else:
-            output = f"node [feature={self.feature}, threshold={self.threshold}]"
+            output = f"node [feature={self.feature},\
+                threshold={self.threshold}]"
 
         if self.left_child:
-            output += "\n" + left_child_add_prefix(str(self.left_child).rstrip())
+            output += "\n" +\
+                left_child_add_prefix(str(self.left_child).rstrip())
         if self.right_child:
-            output += "\n" + right_child_add_prefix(str(self.right_child).rstrip())
+            output += "\n" +\
+                right_child_add_prefix(str(self.right_child).rstrip())
 
         return output
 
