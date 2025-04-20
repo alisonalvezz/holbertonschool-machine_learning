@@ -130,17 +130,16 @@ class Node:
         """
         def is_large_enough(x):
             """
-            Checks if the features of individuals are greater than the
-            lower bounds
+            Checks if the features of individuals are
+            greater than the lower bounds
             for each feature.
 
             Args:
-                x (np.ndarray): 2D array of shape (n_individuals, n_features)
+                x (np.ndarray): 2D array of shape
 
             Returns:
                 np.ndarray: 1D array of booleans indicating whether each
-                individual
-                            satisfies the lower bounds.
+                individual satisfies the lower bounds.
             """
             return np.array([np.greater(x[:, key], self.lower[key])
                              for key in self.lower.keys()]).all(axis=0)
@@ -155,7 +154,8 @@ class Node:
                 x (np.ndarray): 2D array of shape (n_individuals, n_features)
 
             Returns:
-                np.ndarray: 1D array of booleans indicating whether each individual
+                np.ndarray: 1D array of booleans indicating
+                        whether each individual
                             satisfies the upper bounds.
             """
             return np.array([np.less_equal(x[:, key], self.upper[key])
